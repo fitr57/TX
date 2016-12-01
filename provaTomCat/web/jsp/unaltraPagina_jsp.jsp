@@ -8,6 +8,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1> questa e' una seconda pagina </h1>
+        <h1> questa e' una seconda pagin   </h1>
     </body>
 </html>
