@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <!--
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" /> 
+        <script src="/lib/bootstrap/js/bootstrap.min.js" > </script>
+        -->
+        <script src="lib/jquery/jquery.js" ></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    </head>
+    <body>
+
+        <p id="p"></p>
+    <center>
+        <h1>prova form</h1>
+            
+        <form id="myform" action="jsp/pr.jsp">
+            First name:<br>
+            <input type="text" name="name" >
+            <br>
+            Last name:<br>
+            <input type="text" name="lastname" >
+            <br>
+            Age:<br>
+            <input type="int" name="age" >
+            <br>
+            altri dati:<br>
+
+            <p id="n"></p>
+            <input type="number" id="e" min="1" max="30"><button type="button" onclick="myf()">crea altri parametri</button>
+
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <!--<button type="submit" action="jsp/unaltraPagina_jsp.jsp" > altra pagina </button>-->
+        <a href="jsp/unaltraPagina_jsp.jsp"><button>altra pagina</button></a>
+    </center>
+    <script>
+        var bol = true;
+        function myf() {
+            if (bol) {
+                bol = false;
+                var a = document.getElementById("e").value;
+                var myval = (a * 1);
+                //var c = a + b;
+
+                /***/
+                for (var d = 0; d < myval; d++) {
+
+                    var ff = d + 1;
+                    var pj = document.createElement("p");
+
+                    var namepar = document.createTextNode("altro dato n: " + ff);
+                    pj.appendChild(namepar);
+                    document.getElementById("myform").appendChild(pj);
+
+                    var x = document.createElement("INPUT");
+                    x.setAttribute("type", "text");
+                    x.setAttribute("name", "datoInpiu" + d);
+                    document.getElementById("myform").appendChild(x);
+                }
+                /***/
+            }
+            //document.getElementById ("p").innerHTML = c;
+        }
+
+    </script>
+
+
+</body>
+</html>
