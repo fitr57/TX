@@ -3,7 +3,7 @@
  *
  * @author e.carabbio
  */
-public class Valore_tasse {
+ public class Valore_tasse {
 
     public static final int SINGLE = 1;
     public static final int SPOSATO = 2;
